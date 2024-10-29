@@ -1,0 +1,14 @@
+version: "3"
+services:
+  nextapp:
+    image: node:current-slim
+    ports:
+      - 3000:3000
+      - 6006:6006
+    environment:
+      TZ: Asia/Tokyo
+    working_dir: /usr/src/app
+    volumes:
+      - ./nextapp:/usr/src/app
+    stdin_open: true
+    tty: true
